@@ -157,69 +157,39 @@ public class PhilippineFlagApp extends Application {
      * corners of the triangle, and one star
      * is positioned on the right side.
      */
-    private void drawThreeStars(
-            int x,
-            int y,
-            int width,
-            int height) {
-
+    private void drawThreeStars(int x, int y, int width, int height) {
         // Calculate star size based on flag height
-        double starSize =
-                height * 0.05;
+        double starSize = height * 0.05;
 
         // Draw top-left star
-        drawSingleStar(
-                starSize,
-                x + width * 0.04,
-                y + height * 0.15
-        );
+        drawSingleStar(starSize, x + width * 0.04, y + height * 0.15);
 
         // Draw bottom-left star
-        drawSingleStar(
-                starSize,
-                x + width * 0.04,
-                y + height * 0.85
-        );
+        drawSingleStar(starSize, x + width * 0.04, y + height * 0.85);
 
         // Draw center star
-        drawSingleStar(
-                starSize,
-                x + width * 0.35,
-                y + height * 0.50
-        );
+        drawSingleStar(starSize, x + width * 0.35, y + height * 0.50);
     }
 
     /**
      * Draws a single 5-pointed star
      * at the specified position.
      */
-    private void drawSingleStar(
-            double size,
-            double x,
-            double y) {
-
+    private void drawSingleStar(double size, double x, double y) {
         // Number of outer points
         int points = 5;
 
         // Calculate the radius of the inner points
-        double innerRadius =
-                size * 0.4;
+        double innerRadius = size * 0.4;
 
         // Arrays to store star coordinates
-        double[] xPoints =
-                new double[10];
-
-        double[] yPoints =
-                new double[10];
+        double[] xPoints = new double[10];
+        double[] yPoints = new double[10];
 
         // Calculate all 10 points of the star
         for (int i = 0; i < 10; i++) {
-
             // Calculate the angle
-            double angle =
-                    Math.toRadians(
-                            -90 + i * 36
-                    );
+            double angle = Math.toRadians(-90 + i * 36);
 
             // Alternate between outer
             // and inner points
@@ -232,71 +202,20 @@ public class PhilippineFlagApp extends Application {
             }
 
             // Calculate X coordinate
-            xPoints[i] =
-                    x
-                            + Math.cos(angle)
-                            * currentRadius;
+            xPoints[i] = x + Math.cos(angle) * currentRadius;
 
             // Calculate Y coordinate
-            yPoints[i] =
-                    y
-                            + Math.sin(angle)
-                            * currentRadius;
+            yPoints[i] = y + Math.sin(angle) * currentRadius;
         }
 
         // Set star color
         graphics.setFill(Color.GOLD);
 
         // Draw the star
-        graphics.fillPolygon(
-                xPoints,
-                yPoints,
-                10
-        );
+        graphics.fillPolygon(xPoints, yPoints, 10);
     }
 
-    /**
-     * Starts the JavaFX application.
-     */
-    @Override
-    public void start(Stage stage) {
 
-        // PH flag 2:1 ratio standard
-        int width = 600;
-        int height = 300;
-
-        // Draw the Philippine flag
-        Canvas flagCanvas =
-                drawFlag(
-                        width,
-                        height,
-                        0,
-                        0
-                );
-
-        // Place the canvas inside a Pane
-        Pane root =
-                new Pane(flagCanvas);
-
-        // Create the scene
-        Scene scene =
-                new Scene(
-                        root,
-                        width,
-                        height
-                );
-
-        // Set the window title
-        stage.setTitle(
-                "Philippine Flag"
-        );
-
-        // Set the scene
-        stage.setScene(scene);
-
-        // Display the window
-        stage.show();
-    }
 
     /**
      * Main method that launches the JavaFX application.
