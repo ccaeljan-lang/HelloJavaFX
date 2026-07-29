@@ -8,54 +8,54 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+/**
+ * Simple PhilippineFlagApp class creates a drawing of the Philippine flag
+ * on a JavaFX Canvas.
+ *
+ * The flag consists of a white triangle on the left with a sun and
+ * three stars, and blue and red horizontal stripes.
+ */
 public class PhilippineFlagApp extends Application {
-    @Override
-    public void start(Stage stage) {
+    // Canvas where the flag will be drawn
+    private final Canvas canvas;
+
+    // Graphics context used for drawing shapes and colors
+    private GraphicsContext graphics;
+
+    /**
+     * Constructor creates a new canvas with specified dimensions.
+     */
+    public PhilippineFlagApp() {
         // PH flag 2:1 ratio standard
-        double width = 600;
-        double height = 300;
+        int canvasWidth = 600;
+        int canvasHeight = 300;
 
-        // Creates the canvas
-        Canvas canvas = new Canvas(width, height);
-        GraphicsContext gc = canvas.getGraphicsContext2D();
+        // Create the canvas where we'll draw the flag
+        this.canvas = new Canvas(canvasWidth, canvasHeight);
+    }
 
-        // Blue upper
-        gc.setFill(Color.BLUE);
-        gc.fillRect(0, 0, width, height / 2);
+    /**
+     * Creates and draws the complete Philippine flag on the canvas.
+     */
+    public Canvas drawFlag(int width, int height, int x, int y) {
+        // Get the graphics context to start drawing
+        graphics = canvas.getGraphicsContext2D();
 
-        // Red bottom
-        gc.setFill(Color.RED);
-        gc.fillRect(0, height / 2, width, height / 2);
+        // Draw the main components of the flag
+        drawBlueStripe(x, y, width, height);
+        drawRedStripe(x, y, width, height);
+        drawWhiteTriangle(x, y, width, height);
+        drawSun(x, y, width, height);
+        drawThreeStars(x, y, width, height);
 
-        // White Triangle
-        gc.setFill(Color.WHITE);
-        double[] triangleX = {0, 0, width * 0.45};
-        double[] triangleY = {0, height, height / 2};
-        gc.fillPolygon(triangleX, triangleY, 3);
+        // Return the canvas with the completed flag
+        return canvas;
+    }
 
-        // Sun location
-        double sunX = width * 0.15;
-        double sunY = height / 2;
-        double sunRadius = 25;
-
-        // Sun rays
-        gc.setStroke(Color.YELLOW);
-        gc.setLineWidth(8);
-
-        // Revolve sun rays
-        for (int i = 0; i < 8; i++) {
-            double angle = Math.toRadians(i * 45);
-            double innerRadius = 30;
-            double outerRadius = 50;
-            double x1 = sunX + Math.cos(angle) * innerRadius;
-            double y1 = sunY + Math.sin(angle) * innerRadius;
-            double x2 = sunX + Math.cos(angle) * outerRadius;
-            double y2 = sunY + Math.sin(angle) * outerRadius;
-            gc.strokeLine(x1, y1, x2, y2);
-        }
-
-        // Sun circle
-        gc.setFill(Color.YELLOW);
-        gc.fillOval(sunX - sunRadius, sunY - sunRadius, sunRadius * 2, sunRadius * 2);
+    /**
+     * Main method that launches the JavaFX application.
+     */
+    public static void main(String[] args) {
+        launch(args);
     }
 }
