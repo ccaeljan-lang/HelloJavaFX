@@ -53,6 +53,32 @@ public class PhilippineFlagApp extends Application {
     }
 
     /**
+     * Draws the blue horizontal stripe
+     * on the top half of the flag.
+     */
+    private void drawBlueStripe(int x, int y, int width, int height) {
+        // Set the fill color to blue
+        graphics.setFill(Color.BLUE);
+
+        // Draw the blue stripe
+        graphics.fillRect(x, y, width, height / 2);
+    }
+
+    /**
+     * Draws the red horizontal stripe
+     * on the bottom half of the flag.
+     */
+    private void drawRedStripe(int x, int y, int width, int height) {
+        // Set the fill color to red
+        graphics.setFill(Color.RED);
+
+        // Draw the red stripe
+        graphics.fillRect(x, y + height / 2, width, height / 2);
+    }
+
+
+
+    /**
      * Main method that launches the JavaFX application.
      */
     public static void main(String[] args) {
