@@ -215,7 +215,33 @@ public class PhilippineFlagApp extends Application {
         graphics.fillPolygon(xPoints, yPoints, 10);
     }
 
+    /**
+     * Starts the JavaFX application.
+     */
+    @Override
+    public void start(Stage stage) {
+        // PH flag 2:1 ratio standard
+        int width = 600;
+        int height = 300;
 
+        // Draw the Philippine flag
+        Canvas flagCanvas = drawFlag(width, height, 0, 0);
+
+        // Place the canvas inside a Pane
+        Pane root = new Pane(flagCanvas);
+
+        // Create the scene
+        Scene scene = new Scene(root, width, height);
+
+        // Set the window title
+        stage.setTitle("Philippine Flag");
+
+        // Set the scene
+        stage.setScene(scene);
+
+        // Display the window
+        stage.show();
+    }
 
     /**
      * Main method that launches the JavaFX application.
