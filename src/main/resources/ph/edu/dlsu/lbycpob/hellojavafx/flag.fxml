@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane layoutX="260.0" layoutY="-14.0">
-        <fx:include source="blue.fxml" />
-    </AnchorPane>
-    <AnchorPane layoutY="600.0">
-        <fx:include source="red.fxml" />
-    </AnchorPane>
-    <AnchorPane layoutX="540.0" layoutY="1200.0">
-        <fx:include source="white.fxml" />
-    </AnchorPane>
-    <AnchorPane layoutX="540.0" layoutY="1200.0">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0038a8" height="307.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1200.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ce1126" height="334.0" layoutY="304.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1200.0" />
+    <Polygon fill="WHITE" layoutX="335.0" layoutY="314.0" points="-335.0, -311.9449462890625, -335.0, 324.0, 226.23968505859375, -10.0" stroke="BLACK" strokeType="INSIDE" />
+    <AnchorPane layoutX="31.0" layoutY="177.0" prefHeight="194.0" prefWidth="188.0">
         <fx:include source="sun.fxml" />
     </AnchorPane>
-    <AnchorPane layoutX="540.0" layoutY="1200.0">
-        <fx:include source="star.fxml" />
+    <AnchorPane layoutX="-3.0" layoutY="44.0">
+        <fx:include source="star2.fxml" />
     </AnchorPane>
-    <AnchorPane layoutX="540.0" layoutY="1200.0">
+    <AnchorPane layoutX="24.0" layoutY="3.0" prefHeight="100.0" prefWidth="98.0">
         <fx:include source="star.fxml" />
-    </AnchorPane>
-    <AnchorPane layoutX="540.0" layoutY="1200.0">
-        <fx:include source="star.fxml" />
+       <AnchorPane layoutX="-30.0" layoutY="-2.0">
+           <fx:include source="star3.fxml" />
+       </AnchorPane>
     </AnchorPane>
 </AnchorPane>
