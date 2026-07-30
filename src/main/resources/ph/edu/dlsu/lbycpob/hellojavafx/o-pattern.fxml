@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <StackPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <AnchorPane prefHeight="400.0" prefWidth="600.0">
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="50.0" />
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="50.0" />
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="50.0" />
 
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0" />
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="170.0" />
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="60.0" translateY="30.0"/>
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="230.0" translateY="30.0"/>
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="400.0" translateY="30.0"/>
 
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="290.0" />
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="290.0" />
-            <fx:include source="flag.fxml" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="290.0" />
-        </AnchorPane>
-    </children>
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="60.0" translateY="150.0"/>
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="400.0" translateY="150.0"/>
+
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="60.0" translateY="300.0"/>
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="230.0" translateY="300.0"/>
+    <fx:include source="flag.fxml" StackPane.alignment="TOP_LEFT" translateX="400.0" translateY="300.0"/>
 </StackPane>
