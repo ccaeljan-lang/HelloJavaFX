@@ -1,7 +1,9 @@
 <!-- sun.fxml -->
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.SVGPath?>
-<Pane prefWidth="254" prefHeight="254">
+<?import javafx.scene.transform.Scale?>
+<?import javafx.scene.transform.Translate?>
+<Pane prefWidth="25.4" prefHeight="25.4">
     <SVGPath content="
            M 112.00,15.00
            C 112.00,15.00 116.95,55.00 116.95,55.00
@@ -152,5 +154,5 @@
              93.09,74.19 114.00,69.00 114.00,69.00
              113.81,60.26 110.13,43.30 108.39,34.00
              106.56,24.23 103.74,21.12 112.00,15.00 Z"
-             fill="#FFD321" stroke="#FFD321" strokeWidth="2" />
+             fill="#FFD321" stroke="#FFD321" strokeWidth="2" scaleX="0.1" scaleY="0.1"/>
 </Pane>

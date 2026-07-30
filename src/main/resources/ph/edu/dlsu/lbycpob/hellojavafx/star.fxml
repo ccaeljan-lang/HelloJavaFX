@@ -1,7 +1,11 @@
 <!-- star.fxml -->
+
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.SVGPath?>
-<Pane prefWidth="64" prefHeight="63">
+<?import javafx.scene.transform.Scale?>
+<?import javafx.scene.transform.Translate?>
+
+<Pane prefWidth="6.4" prefHeight="6.3">
     <SVGPath content="M 459.61,300.00
         C 459.61,300.00 437.07,307.84 437.07,307.84
         437.07,307.84 436.58,331.70 436.58,331.70
@@ -13,5 +17,10 @@
         422.16,287.32 436.58,268.30 436.58,268.30
         436.58,268.30 437.07,292.16 437.07,292.16
         437.07,292.16 459.61,300.00 459.61,300.00 Z"
-             fill="#FFD321" stroke="#FFD321" strokeWidth="2" />
+             fill="#FFD321" stroke="#FFD321" strokeWidth="2">
+        <transforms>
+            <Scale x="0.1" y="0.1"/>
+            <Translate x="-399.31" y="-268.30"/>
+        </transforms>
+    </SVGPath>
 </Pane>
