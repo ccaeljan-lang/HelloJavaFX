@@ -1,7 +1,7 @@
 <!-- star.fxml -->
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.SVGPath?>
-<Pane prefWidth="1200" prefHeight="600">
+<Pane prefWidth="64" prefHeight="63">
     <SVGPath content="M 459.61,300.00
         C 459.61,300.00 437.07,307.84 437.07,307.84
         437.07,307.84 436.58,331.70 436.58,331.70

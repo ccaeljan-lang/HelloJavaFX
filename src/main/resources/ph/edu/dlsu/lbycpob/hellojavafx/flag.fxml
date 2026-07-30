@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane layoutX="260.0" layoutY="-14.0">
+        <fx:include source="blue.fxml" />
+    </AnchorPane>
+    <AnchorPane layoutY="600.0">
+        <fx:include source="red.fxml" />
+    </AnchorPane>
+    <AnchorPane layoutX="540.0" layoutY="1200.0">
+        <fx:include source="white.fxml" />
+    </AnchorPane>
+    <AnchorPane layoutX="540.0" layoutY="1200.0">
+        <fx:include source="sun.fxml" />
+    </AnchorPane>
+    <AnchorPane layoutX="540.0" layoutY="1200.0">
+        <fx:include source="star.fxml" />
+    </AnchorPane>
+    <AnchorPane layoutX="540.0" layoutY="1200.0">
+        <fx:include source="star.fxml" />
+    </AnchorPane>
+    <AnchorPane layoutX="540.0" layoutY="1200.0">
+        <fx:include source="star.fxml" />
+    </AnchorPane>
+</AnchorPane>

@@ -1,7 +1,7 @@
 <!-- blue.fxml -->
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.SVGPath?>
-<Pane prefWidth="1200" prefHeight="600">
+<Pane prefWidth="1200" prefHeight="594">
     <SVGPath content="M 0.00,0.00
            C 0.00,0.00 1200.00,0.00 1200.00,0.00
              1200.00,0.00 1200.00,300.00 1200.00,300.00
