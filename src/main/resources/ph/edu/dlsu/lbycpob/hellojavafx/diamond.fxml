@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <fx:include source="flag.fxml" />
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <fx:include source="flag.fxml" />
+            </children>
+        </VBox>
+    </left>
 
-</AnchorPane>
+    <right>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <fx:include source="flag.fxml" />
+            </children>
+        </VBox>
+    </right>
+    <bottom>
+        <HBox alignment="TOP_CENTER" prefHeight="148.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <fx:include source="flag.fxml" />
+            </children>
+        </HBox>
+    </bottom>
+    <center>
+        <HBox alignment="CENTER" prefHeight="278.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="192.0" prefWidth="240.0">
+                    <children>
+                        <fx:include source="flag.fxml" />
+                  <HBox prefHeight="158.0" prefWidth="240.0" />
+                    </children>
+                        <fx:include source="flag.fxml" />
+                </VBox>
+
+                <VBox prefHeight="246.0" prefWidth="120.0">
+                    <children>
+                        <fx:include source="flag.fxml" />
+                  <HBox prefHeight="164.0" prefWidth="120.0" />
+                    </children>
+                        <fx:include source="flag.fxml" />
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+</BorderPane>
